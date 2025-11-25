@@ -18,9 +18,9 @@ def get_model(model_name, path):
         model.classifier = torch.nn.Linear(model.classifier.in_features, 2)
     else:
         raise ValueError("Unknown model")
-    # Load the trained weights
+    
     model.load_state_dict(torch.load(path, map_location=device))
-    model.to(device)   # مهم جدًا عشان GPU
+    model.to(device)   
     model.eval()
     return model
 
