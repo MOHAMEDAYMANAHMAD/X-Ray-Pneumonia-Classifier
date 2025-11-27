@@ -176,4 +176,7 @@ cython_debug/
 
 DATA
 models
-.gitignore
+.dockerignore
+mlruns
+pdm.lock
+pyproject.toml
